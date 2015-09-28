@@ -88,11 +88,32 @@ body {
   outline: none;
 }
 
-/* Key Label */
+/* Key */
+.key-container {
+  display: block;
+  position: relative;
+  width: 680px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .key-label {
   display: inline-block;
   position: relative;
-  left: 165px;
+  margin: 0 10px 0 0;
   color: #0A908F;
   font-family: Roboto;
+  font-weight: 500;
+}
+
+.key-input {
+  background: transparent;
+  border: none;
+  color: #EEFF41;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.key-input:focus{
+  outline: none;
 }
