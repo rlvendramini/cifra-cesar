@@ -21,9 +21,8 @@
           <span class="input-icon">
             <i class="material-icons">menu</i>
           </span>
-          <input type="text" id="word" class="input" placeholder="Digite uma palavra ou frase para criptografar">
+          <input type="text" class="input" placeholder="Digite uma palavra ou frase para criptografar">
         </div>
-        <p class="key-label">Chave criptográfica de 1 à 10:</p>
       </div>
     </header>
 
@@ -33,25 +32,27 @@
 					<header>
 						<h2>Criptografia com base na Cifra de César</h2>
 						<legend>Digite uma frase ou palavra que deseja ocultar através da Cifra de César</legend>
-					</header>
-					
+					</header>					
 						<fieldset>
 							<legend>Digite aqui sua palavra ou frase:</legend>
-<<<<<<< HEAD
-							<input type="text" name="frase">
-=======
 							<input type="text" id="word" name="frase" autocomplete autofocus>
->>>>>>> dfeeea51d668ec47a251664505fd7272db804b34
 						</fieldset>
 						<fieldset>
 							<legend>Escolha um valor entre 1 e 26:</legend>
-							<input type="number" id="interval" name="intervalo" min="1" max="26">
+							<span id="label_in">0</span>
+							<input type="range" id="interval" onInput="exibeRange();" name="intervalo" min="1" max="26">
 						</fieldset>
 						<fieldset>
 							<button onClick="encriptar();">Encriptar</button>
 						</fieldset>
-					 
 		           <script type="text/javascript">
+		           		function exibeRange()
+		           		{
+		           			var input = document.getElementById('interval');
+		           			var valor = parseInt(input.value);
+		           			document.getElementById('label_in').innerHTML=valor;
+		           		}
+
 			           	function comparar(x,y)
 			            {
 			            	var caractere = new Array('-', '_', ',', '.', ';', '!', '@', '#', '$', '%', '¨', '&', '*', '(', ')', '+', '=', '[', ']', '{', '}', '~', '^', '\\', '|', '´', '`', '§', 'ª', 'º');
@@ -106,13 +107,7 @@
 
 			                document.getElementById("cript").innerHTML = 'Resultado: ' + resultado;
 			            }
-
-			            function revelar()
-			            {
-			            	alert(document.getElementById('word').value);
-			            }
 		            </script>
-					
 					<footer>
 						<p id="cript"></p>
 						<button onClick="location.reload();">Tentar novamente</button>
