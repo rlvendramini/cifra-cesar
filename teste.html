@@ -33,15 +33,26 @@
 						<h2>Criptografia com base na Cifra de César</h2>
 						<legend>Digite uma frase ou palavra que deseja ocultar através da Cifra de César</legend>
 					</header>
+						<script type="text/javascript">
+							function desabilita()
+			           		{
+			           			var valor=document.getElementById('frase').value;
+			           			var range=document.getElementById('interval');
+			           			if(valor!="")
+			           				range.removeAttribute('disabled');
+			           			else if(valor!=null)
+			           				range.removeAttribute('disabled');
+			           		}
+						</script>
 					
 						<fieldset>
 							<legend>Digite aqui sua palavra ou frase:</legend>
-							<input type="text" id="word" name="frase" autocomplete autofocus>
+							<input type="text" id="word" onChange="desabilita();" name="frase" autocomplete autofocus>
 						</fieldset>
 						<fieldset>
 							<legend>Escolha um valor entre 1 e 26:</legend>
 							<span id="label_in">0</span>
-							<input type="range" id="interval" onInput="exibeRange();" name="intervalo" min="1" max="26">
+							<input type="range" id="interval" onInput="exibeRange(); encriptar();" name="intervalo" min="1" max="26" disabled>
 						</fieldset>
 						<fieldset>
 							<button onClick="encriptar();">Encriptar</button>
