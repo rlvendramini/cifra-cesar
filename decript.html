@@ -14,36 +14,39 @@
 		<div class="main">
 			<nav>
 				<ul>
-					<li><a href="#" title="Página inicial">Início</a></li>
-					<li><a href="#" title="Link">Link</a></li>
+					<li><a href="index.html" title="Página inicial">Início</a></li>
+					<li><a href="encript.html" title="Codificar uma mensagem">Encriptar</a></li>
+					<li><a href="decript.html" title="Decodificar uma mensagem secreta">Decriptar</a></li>
 				</ul>
 			</nav>
 			<section>
 				<article>
 					<header>
-						<h2>Criptografia da Cifra de César</h2>
-						<legend>Digite uma frase ou palavra que deseja ocultar através da Cifra de César</legend>
+						<h2>Descriptografia com base na Cifra de César</h2>
+						<legend>Digite uma frase ou palavra que deseja revelar através da Cifra de César</legend>
 					</header>
 					
 						<fieldset>
-							<legend>Digite aqui sua palavra ou frase:</legend>
+							<legend>Digite aqui sua palavra ou frase criptografada:</legend>
 							<input type="text" id="word" name="frase">
 						</fieldset>
 						<fieldset>
-							<legend>Escolha um valor entre 1 e 10:</legend>
-							<input type="number" id="interval" name="intervalo">
+							<legend>Escolha uma chave de descriptografia entre 1 e 10:</legend>
+							<input type="number" id="interval" name="intervalo" min="1" max="10">
 						</fieldset>
 						<fieldset>
-							<button onClick="encriptar();">Encriptar</button><button onClick="revelar();">Revelar</button>
+							<button onClick="decriptar();">Decriptar</button>
 						</fieldset>
 					 
 		           <script type="text/javascript">
 			           	function comparar(x,y)
 			            {
 			                var alfabeto = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+			                alfabeto.sort();
+			                alfabeto.reverse();
 
 			                var limite = alfabeto.length;
-			            	var indice = alfabeto.indexOf(x);
+			            	var indice = alfabeto.indexOf(x.toLowerCase());
 			            	var diferenca = limite-indice;
 
 			                for(var i = 0; i < limite; i++)
@@ -57,7 +60,7 @@
 			                }
 			            }
 
-			            function encriptar()
+			            function decriptar()
 			            {
 			              	var frase = document.getElementById('word').value;
 			              	var intervalo = parseInt(document.getElementById('interval').value);
