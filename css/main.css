@@ -1,5 +1,5 @@
 body {
-  background: #00BCD4;
+  background: #10CBCF;
   /*color: #EEFF41;*/
 }
 
@@ -18,7 +18,7 @@ body {
 .logo {
   display: block;
   position: relative;
-  color: #0097A7;
+  color: #0A908F;
   text-align: center;
   margin: 50px 0 30px 0;
   font-family: 'Roboto Slab', serif;
@@ -48,6 +48,7 @@ body {
   width: 680px;
   height: 50px;
   left: 50%;
+  margin: 0 0 20px 0;
   background: #fafafa;
   border-radius: 5px;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1), 0 2px 3px 0 rgba(0,0,0,0.2);
@@ -85,4 +86,13 @@ body {
 
 .input:focus {
   outline: none;
+}
+
+/* Key Label */
+.key-label {
+  display: inline-block;
+  position: relative;
+  left: 165px;
+  color: #0A908F;
+  font-family: Roboto;
 }
