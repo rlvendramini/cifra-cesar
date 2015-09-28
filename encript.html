@@ -36,11 +36,11 @@
 					
 						<fieldset>
 							<legend>Digite aqui sua palavra ou frase:</legend>
-							<input type="text" id="word" name="frase">
+							<input type="text" id="word" name="frase" autocomplete autofocus>
 						</fieldset>
 						<fieldset>
-							<legend>Escolha um valor entre 1 e 10:</legend>
-							<input type="number" id="interval" name="intervalo" min="1" max="10">
+							<legend>Escolha um valor entre 1 e 26:</legend>
+							<input type="number" id="interval" name="intervalo" min="1" max="26">
 						</fieldset>
 						<fieldset>
 							<button onClick="encriptar();">Encriptar</button>
@@ -49,14 +49,33 @@
 		           <script type="text/javascript">
 			           	function comparar(x,y)
 			            {
+			            	var caractere = new Array('-', '_', ',', '.', ';', '!', '@', '#', '$', '%', '¨', '&', '*', '(', ')', '+', '=', '[', ']', '{', '}', '~', '^', '\\', '|', '´', '`', '§', 'ª', 'º');
 			                var alfabeto = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
 			                alfabeto.sort();
+			                if(x == 'é' || x == 'ê')
+		                		x = 'e';
+		                	else if(x == 'á' || x == 'à' || x == 'â')
+		                		x = 'a';
+		                	else if(x == 'í')
+		                		x = 'i';
+		                	else if(x == 'ó' || x == 'ô')
+		                		x = 'o';
+		                	else if(x == 'ú')
+		                		x = 'u';
+		                	else if(x == 'ç')
+		                		x = 'c';
 			                var limite = alfabeto.length;
 			            	var indice = alfabeto.indexOf(x.toLowerCase());
 			            	var diferenca = limite-indice;
 
 			                for(var i = 0; i < limite; i++)
 			                {
+			                	for(var j=0; j<caractere.length; j++)
+			                	{
+			                		if(x==caractere[j])
+			                			return ' ';
+			                	}
+			                	
 			                	if(x == '' || x == ' ') 
 			                		return x;
 			                	else if(diferenca<=y)
