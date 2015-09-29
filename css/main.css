@@ -5,7 +5,7 @@ body {
 
 
 .wrap {
-  display: block;
+  display: inline-block;
   position: relative;
   width: 1024px;
   padding: 10px;
@@ -24,6 +24,18 @@ body {
   font-size: 2em;
 }
 
+.logo.menu {
+  margin: 0 0 30px 0;
+}
+
+.subtitle {
+  margin: 0 0 30px 0;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #fafafa;
+}
 
 
 #main-header {
@@ -66,7 +78,59 @@ main .wrap {
   transform: translateX(-50%);
 }
 
+.main-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+#main-nav {
+  position: relative;
+  width: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+.nav-button {
+  display: inline-block;
+  position: relative;
+  min-width: 250px;
+  height: 30px;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  background-color: #EEFF41;
+  color: #9EA92F;
+  border-radius: 4.5px;
+  font-family: 'Roboto';
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1), 0 2px 3px 0 rgba(0,0,0,0.2);
+  transition: all .2s ease-in-out;
+}
+
+.nav-button:hover {
+  background: #F4FF82;
+  box-shadow: 0 6px 13px 0 rgba(0,0,0,0.2), 0 8px 18px 0 rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.nav-button:active {
+  box-shadow: 0 15px 25px 0 rgba(0,0,0,0.2), 0 20px 35px 0 rgba(0,0,0,0.2);
+}
+
+
+.nav-social-icon {
+  margin: 0 10px 0 0;
+  color: #0A908F;
+}
+
+.nav-social-icon i {
+  font-size: 1.4em;
+}
 
 /* Resultado */
 .result {
