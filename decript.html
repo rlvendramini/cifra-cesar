@@ -39,7 +39,7 @@
 						</fieldset>
 					 
 		           <script type="text/javascript">
-			           	function comparar(x,y)
+			           	function decomparar(x,y)
 			            {
 			                var alfabeto = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
 			                alfabeto.sort();
@@ -70,16 +70,11 @@
 
 			                for(i = 0; i < fraseSplitted.length; i++)
 			                {
-			                  novaFrase[i] = comparar(fraseSplitted[i], intervalo);
+			                  novaFrase[i] = decomparar(fraseSplitted[i], intervalo);
 			                }
 			                var resultado = novaFrase.join("");
 
 			                document.getElementById("cript").innerHTML = 'Resultado: ' + resultado;
-			            }
-
-			            function revelar()
-			            {
-			            	alert(document.getElementById('word').value);
 			            }
 		            </script>
 					
