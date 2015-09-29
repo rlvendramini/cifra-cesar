@@ -30,96 +30,14 @@
         </div>
       </div>
     </header>
-
-		<div class="main">
-			<section>
-				<article>
-					<header>
-						<h2>Criptografia com base na Cifra de César</h2>
-						<legend>Digite uma frase ou palavra que deseja ocultar através da Cifra de César</legend>
-					</header>					
-						<fieldset>
-							<legend>Digite aqui sua palavra ou frase:</legend>
-							<input type="text" name="frase" autocomplete autofocus>
-						</fieldset>
-						<fieldset>
-							<legend>Escolha um valor entre 1 e 26:</legend>
-							<span>0</span>
-							<input type="range" onInput="exibeRange();" name="intervalo" min="1" max="26">
-						</fieldset>
-						<fieldset>
-							<button onClick="encriptar();">Encriptar</button>
-						</fieldset>
-		           <script type="text/javascript">
-		           		function exibeRange()
-		           		{
-		           			var input = document.getElementById('interval');
-		           			var valor = parseInt(input.value);
-		           			document.getElementById('label_in').innerHTML=valor;
-		           		}
-
-			           	function comparar(x,y)
-			            {
-			            	var caractere = new Array('-', '_', ',', '.', ';', '!', '@', '#', '$', '%', '¨', '&', '*', '(', ')', '+', '=', '[', ']', '{', '}', '~', '^', '\\', '|', '´', '`', '§', 'ª', 'º');
-			                var alfabeto = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
-			                alfabeto.sort();
-			                if(x == 'é' || x == 'ê')
-		                		x = 'e';
-		                	else if(x == 'á' || x == 'à' || x == 'â')
-		                		x = 'a';
-		                	else if(x == 'í')
-		                		x = 'i';
-		                	else if(x == 'ó' || x == 'ô')
-		                		x = 'o';
-		                	else if(x == 'ú')
-		                		x = 'u';
-		                	else if(x == 'ç')
-		                		x = 'c';
-			                var limite = alfabeto.length;
-			            	var indice = alfabeto.indexOf(x.toLowerCase());
-			            	var diferenca = limite-indice;
-
-			                for(var i = 0; i < limite; i++)
-			                {
-			                	for(var j=0; j<caractere.length; j++)
-			                	{
-			                		if(x==caractere[j])
-			                			return ' ';
-			                	}
-			                	
-			                	if(x == '' || x == ' ') 
-			                		return x;
-			                	else if(diferenca<=y)
-			                		return alfabeto[y-diferenca];
-			                	else
-				                	return alfabeto[indice + y];
-			                }
-			            }
-
-			            function encriptar()
-			            {
-			              	var frase = document.getElementById('word').value;
-			              	var intervalo = parseInt(document.getElementById('interval').value);
-
-			                var fraseSplitted = frase.split("");
-			                var novaFrase = new Array(fraseSplitted.length);
-
-			                for(i = 0; i < fraseSplitted.length; i++)
-			                {
-			                	novaFrase[i] = comparar(fraseSplitted[i], intervalo);
-			                }
-			                var resultado = novaFrase.join("");
-
-			                document.getElementById("cript").innerHTML = 'Resultado: ' + resultado;
-			            }
-		            </script>
-					<footer>
-						<p id="cript"></p>
-						<button onClick="location.reload();">Tentar novamente</button>
-					</footer>
-				</article>
-			</section>
-			<footer>Copyright 2015</footer>
-		</div>
+    
+    <main>
+      <div class="wrap">
+        <p id="cript" class="result"></p>
+      </div>
+    </main>
+		
+    <footer id="main-footer">Copyright 2015 - Renan &amp; Isac</footer>
+		<script src="js/main.js"></script>
 	</body>
 </html>
