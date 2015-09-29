@@ -1,6 +1,6 @@
 function exibeRange() {
   var input = document.getElementById('interval');
-  var valor = parseInt(input.value);
+  var valor = parseInt(input.value, 10);
   document.getElementById('label_in').innerHTML=valor;
 }
 
@@ -24,15 +24,13 @@ function comparar(x,y) {
   var indice = alfabeto.indexOf(x.toLowerCase());
   var diferenca = limite-indice;
 
-    for(var i = 0; i < limite; i++)
-    {
-      for(var j=0; j<caractere.length; j++)
-      {
+    for(var i = 0; i < limite; i++) {
+      for(var j=0; j<caractere.length; j++) {
         if(x==caractere[j])
           return ' ';
       }
       
-      if(x == '' || x == ' ') 
+      if(x === '' || x == ' ')
         return x;
       else if(diferenca<=y)
         return alfabeto[y-diferenca];
@@ -41,19 +39,17 @@ function comparar(x,y) {
     }
 }
 
-function encriptar()
-{
+function encriptar() {
     var frase = document.getElementById('word').value;
-    var intervalo = parseInt(document.getElementById('interval').value);
+    var intervalo = parseInt(document.getElementById('interval').value, 10);
 
     var fraseSplitted = frase.split("");
     var novaFrase = new Array(fraseSplitted.length);
 
-    for(i = 0; i < fraseSplitted.length; i++)
-    {
+    for(i = 0; i < fraseSplitted.length; i++) {
       novaFrase[i] = comparar(fraseSplitted[i], intervalo);
     }
-    var resultado = novaFrase.join("");
 
+    var resultado = novaFrase.join("");
     document.getElementById("cript").innerHTML = resultado;
 }
