@@ -47,7 +47,6 @@ function comparar(x,y) {
         return alfabeto[indice + y];
     }
   }
-  
 }
 
 function encriptar() {
