@@ -21,12 +21,12 @@
           <span class="input-icon">
             <i class="material-icons">menu</i>
           </span>
-          <input type="text" class="input" placeholder="Digite uma palavra ou frase para criptografar">
+          <input type="text" class="input" id="word" onInput="encriptar();" placeholder="Digite uma palavra ou frase para criptografar">
         </div>
         <div class="key-container">
           <!-- <p class="key-label">Chave criptográfica de 1 à 26:</p> -->
-          <input type="range" class="key-input" onInput="exibeRange();" name="intervalo" value="3" min="1" max="26">
-          <p class="key-label">0</p>
+          <input type="range" class="key-input" id="interval" onInput="exibeRange(); encriptar();" name="intervalo" value="3" min="1" max="26">
+          <p class="key-label" id="label_in">3</p>
         </div>
       </div>
     </header>
@@ -40,12 +40,12 @@
 					</header>					
 						<fieldset>
 							<legend>Digite aqui sua palavra ou frase:</legend>
-							<input type="text" id="word" name="frase" autocomplete autofocus>
+							<input type="text" name="frase" autocomplete autofocus>
 						</fieldset>
 						<fieldset>
 							<legend>Escolha um valor entre 1 e 26:</legend>
-							<span id="label_in">0</span>
-							<input type="range" id="interval" onInput="exibeRange();" name="intervalo" min="1" max="26">
+							<span>0</span>
+							<input type="range" onInput="exibeRange();" name="intervalo" min="1" max="26">
 						</fieldset>
 						<fieldset>
 							<button onClick="encriptar();">Encriptar</button>
