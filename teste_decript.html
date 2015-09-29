@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	    <meta name="description" content="Uma página que tem como o objetivo encriptar uma informação com base na cifra de César">
+	    <meta name="keywords" content="criptografia, encriptação, cifra de cesar, segurança da informação, TI">
+	    <meta name="theme-color" content="#4C4CFF">
+	    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/> -->
+	    <link rel="stylesheet" href="css/normalize.min.css">
+	</head>
+	<body>
+		<div class="main">
+			<nav>
+				<ul>
+					<li><a href="index.html" title="Página inicial">Início</a></li>
+					<li><a href="encript.html" title="Codificar uma mensagem">Encriptar</a></li>
+					<li><a href="decript.html" title="Decodificar uma mensagem secreta">Decriptar</a></li>
+				</ul>
+			</nav>
+			<section>
+				<article>
+					<header>
+						<h2>Descriptografia com base na Cifra de César</h2>
+						<legend>Digite uma frase ou palavra que deseja revelar através da Cifra de César</legend>
+					</header>
+					
+						<fieldset>
+							<legend>Digite aqui sua palavra ou frase criptografada:</legend>
+							<input type="text" id="word" name="frase">
+						</fieldset>
+						<fieldset>
+							<legend>Escolha uma chave de descriptografia entre 1 e 26:</legend>
+							<input type="number" id="interval" name="intervalo" min="1" max="26">
+						</fieldset>
+						<fieldset>
+							<button onClick="decriptar();">Decriptar</button>
+						</fieldset>					
+					<footer>
+						<p id="cript"></p>
+						<button onClick="location.reload();">Tentar novamente</button>
+					</footer>
+				</article>
+			</section>
+			<footer>Copyright 2015</footer>
+		</div>
+	   <script src="js/testes.js"></script>
+	</body>
+</html>
