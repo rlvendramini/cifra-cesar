@@ -21,7 +21,7 @@
           <span class="input-icon">
           <i class="material-icons">menu</i>
           </span>
-          <input type="text" class="input" id="word" onInput="encriptar();" placeholder="Digite uma palavra ou frase para criptografar">
+          <input type="text" class="input" id="word" onInput="encriptar(); showFAB();" placeholder="Digite uma palavra ou frase para criptografar">
         </div>
         <div class="key-container">
           <!-- <p class="key-label">Chave criptográfica de 1 à 26:</p> -->
@@ -34,7 +34,7 @@
     <main>
       <div class="wrap">
         <textarea readonly id="cript" class="result js-copytextarea"></textarea>
-        <a class="fab copy js-textareacopybtn" href="#" title="Clique para copiar"><i class="material-icons">content_copy</i></a>
+        <a class="fab hide copy js-textareacopybtn" href="#" title="Clique para copiar"><i class="material-icons">content_copy</i></a>
       </div>
     </main>
 

@@ -180,7 +180,8 @@ main .wrap {
   bottom: 0;
   right: 0;
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1), 0 2px 3px 0 rgba(0,0,0,0.2);
-  transition: all .1s ease-in-out;
+  opacity: 1;
+  transition: all .2s ease-in-out;
 }
 
 .fab:active {
@@ -189,6 +190,11 @@ main .wrap {
 
 .fab.copy {
   bottom: -100px;
+}
+
+.fab.hide {
+  opacity: 0 !important;
+  transform: scale(0) !important;
 }
 
 .fab i {
