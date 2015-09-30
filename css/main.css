@@ -189,7 +189,7 @@ main .wrap {
 }
 
 .fab.copy {
-  bottom: -100px;
+  margin: 0 20px 20px 0;
 }
 
 .fab.hide {
