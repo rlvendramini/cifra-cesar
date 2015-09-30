@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Uma página que tem como o objetivo encriptar uma informação com base na cifra de César">
     <meta name="keywords" content="criptografia, encriptação, cifra de cesar, segurança da informação, TI">
-    <meta name="theme-color" content="#4C4CFF">
-    <link rel="stylesheet" href="css/normalize.min.css">
-		<title>Cifra de César</title>
-	</head>
-	<body>
-		<div class="main">
-			<nav>
-				<ul>
-					<li><a href="index.html" title="Página inicial">Início</a></li>
-					<li><a href="encript.html" title="Codificar uma mensagem">Encriptar</a></li>
-					<li><a href="decript.html" title="Decodificar uma mensagem secreta">Decriptar</a></li>
-				</ul>
-			</nav>
-			<section>
-				<article>
-					<header>
-						<h2>Cifra de César</h2>
-						<legend>Como funciona a criptografia baseada no conceito da Cifra de César?</legend>
-					</header>
-					<p>
-						Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
+    <meta name="theme-color" content="#EEFF41">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Cifra de César</title>
+  </head>
+  <body>
 
-					</p>
-				</article>
-			</section>
-			<footer>Copyright 2015</footer>
-		</div>
-	</body>
+    <main class="main-menu">
+      <div class="wrap">
+        <h1 class="logo menu">Cesificator</h1>
+        <h3 class="subtitle">Criptografia baseada na Cifra de César.</h3>
+        
+        <!-- Navigation Menu -->
+        <nav id="main-nav">
+          <a class="nav-button" id="howit" href="#">Como Funciona</a>
+          <a class="nav-button" href="encript.html">Criptografar</a>
+          <a class="nav-button" href="decript.html">Decriptografar</a>
+          <a class="nav-social-icon" href="#info" title="Sobre o projeto"><i class="fa fa-info-circle"></i></a>
+          <a class="nav-social-icon" href="#twitter" title="Twitte o projeto"><i class="fa fa-twitter-square"></i></a>
+        </nav>
+
+      </div>
+    </main>
+    
+    <div class="hide" id="explanation">
+      <div class="wrap cycle-slideshow" data-cycle-slides="article" data-cycle-timeout="0" data-cycle-next="#control-r">
+          
+          <article class="exp-article" id="first">
+            <header>
+              <h2>O que é</h2>
+            </header>
+            <p>Em criptografia, a Cifra de César, também conhecida como cifra de troca, código de César ou troca de César, é uma das mais simples e conhecidas técnicas de criptografia. É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, que se apresenta no alfabeto abaixo dela um número fixo de vezes. Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante. O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais.</p>
+          </article>
+
+          <article class="exp-article" id="last">
+            <header>
+              <h2>Quem usa</h2>
+            </header>
+            <p>O processo de criptografia de uma cifra de César é frequentemente incorporado como parte de esquemas mais complexos, como a cifra de Vigenère, e continua tendo aplicações modernas, como no sistema ROT13. Como todas as cifras de substituição monoalfabéticas, a cifra de César é facilmente decifrada e na prática não oferece essencialmente nenhuma segurança na comunicação.</p>
+          </article>
+
+          <article class="exp-article">
+            <header>
+              <h2>Pronto!</h2>
+            </header>
+            <p>
+              Agora é hora de começar a criptografar.
+            </p>  
+          </article>
+        <a class="fab" id="control-r" href="#"><i class="material-icons">arrow_forward</i></a>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/vendor/jquery.cycle2.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
