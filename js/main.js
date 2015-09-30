@@ -104,7 +104,7 @@ function decriptar()
     }
     var resultado = novaFrase.join("");
 
-    document.getElementById("cript").innerHTML = 'Resultado: ' + resultado;
+    document.getElementById("cript").innerHTML = resultado;
 }
 
 

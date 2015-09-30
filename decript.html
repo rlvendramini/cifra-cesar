@@ -1,90 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<title></title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	    <meta name="description" content="Uma página que tem como o objetivo encriptar uma informação com base na cifra de César">
-	    <meta name="keywords" content="criptografia, encriptação, cifra de cesar, segurança da informação, TI">
-	    <meta name="theme-color" content="#4C4CFF">
-	    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/> -->
-	    <link rel="stylesheet" href="css/normalize.min.css">
-	</head>
-	<body>
-		<div class="main">
-			<nav>
-				<ul>
-					<li><a href="index.html" title="Página inicial">Início</a></li>
-					<li><a href="encript.html" title="Codificar uma mensagem">Encriptar</a></li>
-					<li><a href="decript.html" title="Decodificar uma mensagem secreta">Decriptar</a></li>
-				</ul>
-			</nav>
-			<section>
-				<article>
-					<header>
-						<h2>Descriptografia com base na Cifra de César</h2>
-						<legend>Digite uma frase ou palavra que deseja revelar através da Cifra de César</legend>
-					</header>
-					
-						<fieldset>
-							<legend>Digite aqui sua palavra ou frase criptografada:</legend>
-							<input type="text" id="word" name="frase">
-						</fieldset>
-						<fieldset>
-							<legend>Escolha uma chave de descriptografia entre 1 e 26:</legend>
-							<input type="number" id="interval" name="intervalo" min="1" max="26">
-						</fieldset>
-						<fieldset>
-							<button onClick="decriptar();">Decriptar</button>
-						</fieldset>
-					 
-		           <script type="text/javascript">
-			           	function decomparar(x,y)
-			            {
-			                var alfabeto = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
-			                alfabeto.sort();
-			                alfabeto.reverse();
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Uma página que tem como o objetivo encriptar uma informação com base na cifra de César">
+    <meta name="keywords" content="criptografia, encriptação, cifra de cesar, segurança da informação, TI">
+    <meta name="theme-color" content="#EEFF41">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Cifra de César</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="wrap">
+        <h1 class="logo">Decesificator</h1>
+        <div class="input-container">
+          <span class="input-icon">
+          <i class="material-icons">menu</i>
+          </span>
+          <input type="text" class="input" id="word" onInput="decriptar(); showFAB();" placeholder="Digite ou cole uma mensagem criptografada">
+        </div>
+        <div class="key-container">
+          <!-- <p class="key-label">Chave criptográfica de 1 à 26:</p> -->
+          <input type="range" class="key-input" id="interval" onInput="exibeRange(); decriptar();" name="intervalo" value="3" min="1" max="26">
+          <p class="key-label" id="label_in">3</p>
+        </div>
+      </div>
+    </header>
 
-			                var limite = alfabeto.length;
-			            	var indice = alfabeto.indexOf(x.toLowerCase());
-			            	var diferenca = limite-indice;
+    <main>
+      <div class="wrap">
+        <textarea readonly id="cript" class="result js-copytextarea"></textarea>
+        <a class="fab hide copy js-textareacopybtn" href="#" title="Clique para copiar"><i class="material-icons">content_copy</i></a>
+      </div>
+    </main>
 
-			                for(var i = 0; i < limite; i++)
-			                {
-			                	if(x == '' || x == ' ') 
-			                		return x;
-			                	else if(diferenca<=y)
-			                		return alfabeto[y-diferenca];
-			                	else
-				                	return alfabeto[indice + y];
-			                }
-			            }
-
-			            function decriptar()
-			            {
-			              	var frase = document.getElementById('word').value;
-			              	var intervalo = parseInt(document.getElementById('interval').value);
-
-			                var fraseSplitted = frase.split("");
-			                var novaFrase = new Array(fraseSplitted.length);
-
-			                for(i = 0; i < fraseSplitted.length; i++)
-			                {
-			                  novaFrase[i] = decomparar(fraseSplitted[i], intervalo);
-			                }
-			                var resultado = novaFrase.join("");
-
-			                document.getElementById("cript").innerHTML = 'Resultado: ' + resultado;
-			            }
-		            </script>
-					
-					<footer>
-						<p id="cript"></p>
-						<button onClick="location.reload();">Tentar novamente</button>
-					</footer>
-				</article>
-			</section>
-			<footer>Copyright 2015</footer>
-		</div>
-	</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
