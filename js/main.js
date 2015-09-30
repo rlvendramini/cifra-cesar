@@ -111,13 +111,46 @@ function decriptar()
 
 /* Interações da UI */
 
-// Esconde o menu e mostra a explicação da criptografia
-var mainmenu = document.querySelectorAll('.main-menu')[0];
-var expanel = document.querySelector('#explanation');
-var howitbutton = document.querySelector('#howit');
+window.onload = function() {
+  // Esconde o menu e mostra a explicação da criptografia
+  var mainmenu = document.querySelectorAll('.main-menu')[0];
+  var expanel = document.querySelector('#explanation');
+  var howitbutton = document.querySelector('#howit');
 
-howitbutton.onclick = function hideMenu(e) {
-  e.preventDefault();
-  mainmenu.classList.add('hide');
-  expanel.classList.add('show');
-};
+  howitbutton.onclick = function hideMenu(e) {
+    e.preventDefault();
+    mainmenu.classList.add('hide');
+    expanel.classList.add('show');
+  };
+
+  // Último Slide
+  var firstslide = document.querySelector("#first");
+  var lastslide = document.querySelector("#last");
+  var slidebtn = document.querySelector("#control-r");
+
+  slidebtn.onclick = function changeLocation() {
+    if (firstslide.style.visibility == "hidden" && lastslide.style.visibility == "hidden") {
+      window.location.href = "encript.html";
+    }
+  }
+}
+
+
+
+
+// Copiar resultado para o clipboard
+var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+copyTextareaBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  var copyTextarea = document.querySelector('.js-copytextarea');
+  copyTextarea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+});
