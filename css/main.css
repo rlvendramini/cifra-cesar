@@ -71,10 +71,11 @@ body {
 #explanation {
   display: inline-block;
   position: absolute;
+  height: 512px;
   left: 50%;
   top: 50%;
   opacity: 0;
-  transition: transform .5s ease-in-out, opacity .2s ease-in-out;
+  transition: transform .5s ease-in-out, opacity .8s ease-in-out;
   transform: translate(100%, -50%);
 }
 
@@ -83,6 +84,24 @@ body {
   transform: translate(-50%, -50%); 
 }
 
+
+.exp-article header {
+  margin: 0 0 30px 0;
+}
+
+.exp-article p {
+  font-family: 'Roboto';
+  font-size: 1.3em;
+  color: rgba(0,0,0,0.5);
+  line-height: 1.3em;
+}
+
+.exp-article header h2{
+  font-family: 'Roboto';
+  font-size: 2.2em;
+  font-weight: 500;
+  color: #EEFF41;
+}
 
 /* Main */
 main {
@@ -151,6 +170,30 @@ main .wrap {
   box-shadow: 0 15px 25px 0 rgba(0,0,0,0.2), 0 20px 35px 0 rgba(0,0,0,0.2);
 }
 
+.fab {
+  position: fixed;
+  padding: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: #EEFF41;
+  border-radius: 100%;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1), 0 2px 3px 0 rgba(0,0,0,0.2);
+  transition: all .1s ease-in-out;
+}
+
+.fab:active {
+  box-shadow: 0 15px 25px 0 rgba(0,0,0,0.2), 0 20px 35px 0 rgba(0,0,0,0.2);
+}
+
+.fab i {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  color: rgba(0,0,0,0.6);
+  transform: translate(-50%, -50%);
+}
 
 .nav-social-icon {
   margin: 0 10px 0 0;

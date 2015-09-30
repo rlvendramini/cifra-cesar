@@ -24,8 +24,8 @@
         <!-- Navigation Menu -->
         <nav id="main-nav">
           <a class="nav-button" id="howit" href="#">Como Funciona</a>
-          <a class="nav-button" href="#">Criptografar</a>
-          <a class="nav-button" href="#">Decriptografar</a>
+          <a class="nav-button" href="encript.html">Criptografar</a>
+          <a class="nav-button" href="decript.html">Decriptografar</a>
           <a class="nav-social-icon" href="#info" title="Sobre o projeto"><i class="fa fa-info-circle"></i></a>
           <a class="nav-social-icon" href="#twitter" title="Twitte o projeto"><i class="fa fa-twitter-square"></i></a>
         </nav>
@@ -34,11 +34,25 @@
     </main>
     
     <div class="hide" id="explanation">
-      <div class="wrap">
-        <h1>asjdh as dasld </h1>
+      <div class="wrap cycle-slideshow" data-cycle-slides="article" data-cycle-timeout="0" data-cycle-next="#control-r">
+          <article class="exp-article">
+            <header>
+              <h2>O que é</h2>
+            </header>
+            <p>Em criptografia, a Cifra de César, também conhecida como cifra de troca, código de César ou troca de César, é uma das mais simples e conhecidas técnicas de criptografia. É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, que se apresenta no alfabeto abaixo dela um número fixo de vezes. Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante. O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais.</p>
+          </article>
+          <article class="exp-article">
+            <header>
+              <h2>Quem usa</h2>
+            </header>
+            <p>O processo de criptografia de uma cifra de César é frequentemente incorporado como parte de esquemas mais complexos, como a cifra de Vigenère, e continua tendo aplicações modernas, como no sistema ROT13. Como todas as cifras de substituição monoalfabéticas, a cifra de César é facilmente decifrada e na prática não oferece essencialmente nenhuma segurança na comunicação.</p>
+          </article>
+        <a class="fab" id="control-r" href="#"><i class="material-icons">arrow_forward</i></a>
       </div>
     </div>
 
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/vendor/jquery.cycle2.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
