@@ -106,3 +106,18 @@ function decriptar()
 
     document.getElementById("cript").innerHTML = 'Resultado: ' + resultado;
 }
+
+
+
+/* Interações da UI */
+
+// Esconde o menu e mostra a explicação da criptografia
+var mainmenu = document.querySelectorAll('.main-menu')[0];
+var expanel = document.querySelector('#explanation');
+var howitbutton = document.querySelector('#howit');
+
+howitbutton.onclick = function hideMenu(e) {
+  e.preventDefault();
+  mainmenu.classList.add('hide');
+  expanel.classList.add('show');
+};
