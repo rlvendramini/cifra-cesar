@@ -12,11 +12,26 @@ function exibeRange() {
 function comparar(x,y) {
   var algarismos = /\d/;
   var nonAlgarismos = /\D/;
+  var num = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
   var caractere = new Array('-', '_', ',', '.', ';', '!', '@', '#', '$', '%', '¨', '&', '*', '(', ')', '+', '=', '[', ']', '{', '}', '~', '^', '\\', '|', '´', '`', '§', 'ª', 'º');
   var alfabeto = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
   alfabeto.sort();
   if(algarismos.test(x))
-    return parseInt(x)+parseInt(y);
+  {
+    //return parseInt(x)+parseInt(y);
+    var limite = num.length;
+    var indice = num.indexOf(parseInt(x));
+    var diferenca = limite-indice;
+    if(y>=10)
+      var intervalo = parseInt(y/10);
+    else
+      var intervalo = y;
+    if(intervalo>=diferenca)
+      return num[intervalo-diferenca];
+    else
+      return num[indice + intervalo];
+  }
+
   else if(nonAlgarismos.test(x))
   {
     if(x == 'é' || x == 'ê')
@@ -74,7 +89,9 @@ function decomparar(x,y)
 {
   var algarismos = /\d/;
   var nonAlgarismos = /\D/;
+  var num = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
   var alfabeto = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+  num.reverse();
   alfabeto.sort();
   alfabeto.reverse();
 
@@ -83,7 +100,20 @@ function decomparar(x,y)
   var diferenca = limite-indice;
   
   if(algarismos.test(x))
-    return parseInt(x)-parseInt(y);
+  {
+    //return parseInt(x)+parseInt(y);
+    var limite = num.length;
+    var indice = num.indexOf(parseInt(x));
+    var diferenca = limite-indice;
+    if(y>=10)
+      var intervalo = parseInt(y/10);
+    else
+      var intervalo = y;
+    if(intervalo>=diferenca)
+      return num[intervalo-diferenca];
+    else
+      return num[indice + intervalo];
+  }
   for(var i = 0; i < limite; i++)
   {
     if(x == '' || x == ' ') 
