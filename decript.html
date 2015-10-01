@@ -18,14 +18,22 @@
       <div class="wrap">
         <h1 class="logo">Decesificator</h1>
         <div class="input-container">
-          <span class="input-icon">
-          <i class="material-icons">menu</i>
+          <span class="input-icon" onclick="toggleMenu();">
+            <i class="material-icons">menu</i>
           </span>
           <input type="text" class="input" id="word" onInput="decriptar(); showFAB();" placeholder="Digite ou cole uma mensagem criptografada">
         </div>
+        <div class="menu-container">
+          <nav class="dropdown-menu" id="nav-menu">
+            <ul>
+              <li><a href="encript.html">Criptografar</a></li>
+              <li><a href="index.html">Menu Principal</a></li>
+            </ul>
+          </nav>
+        </div>
+
         <div class="key-container">
-          <!-- <p class="key-label">Chave criptográfica de 1 à 26:</p> -->
-          <input type="range" class="key-input" id="interval" onInput="exibeRange(); decriptar();" name="intervalo" value="3" min="1" max="26">
+          <input type="range" class="key-input" id="interval" onInput="decriptar(); exibeRange();" name="intervalo" value="3" min="1" max="26">
           <p class="key-label" id="label_in">3</p>
         </div>
       </div>
@@ -33,7 +41,7 @@
 
     <main>
       <div class="wrap">
-        <textarea readonly id="cript" class="result js-copytextarea"></textarea>
+        <textarea readonly class="result js-copytextarea" id="cript"></textarea>
       </div>
     </main>
 

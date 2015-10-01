@@ -1,3 +1,8 @@
+function toggleMenu() {
+  var menu = document.querySelector("#nav-menu");
+  menu.classList.toggle("show");
+}
+
 function exibeRange() {
   var input = document.getElementById('interval');
   var valor = parseInt(input.value, 10);
@@ -131,9 +136,7 @@ slidebtn.onclick = function changeLocation() {
   if (firstslide.style.visibility == "hidden" && lastslide.style.visibility == "hidden") {
     window.location.href = "encript.html";
   }
-}
-
-
+};
 
 
 // Copiar resultado para o clipboard
@@ -162,3 +165,4 @@ function showFAB() {
     }
   });
 }
+

@@ -18,13 +18,20 @@
       <div class="wrap">
         <h1 class="logo">Cesificator</h1>
         <div class="input-container">
-          <span class="input-icon">
-          <i class="material-icons">menu</i>
+          <span class="input-icon" onclick="toggleMenu();">
+            <i class="material-icons">menu</i>
           </span>
           <input type="text" class="input" id="word" onInput="encriptar(); showFAB();" placeholder="Digite uma palavra ou frase para criptografar">
         </div>
+        <div class="menu-container">
+          <nav class="dropdown-menu" id="nav-menu">
+            <ul>
+              <li><a href="decript.html">Decriptografar</a></li>
+              <li><a href="index.html">Menu Principal</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="key-container">
-          <!-- <p class="key-label">Chave criptográfica de 1 à 26:</p> -->
           <input type="range" class="key-input" id="interval" onInput="exibeRange(); encriptar();" name="intervalo" value="3" min="1" max="26">
           <p class="key-label" id="label_in">3</p>
         </div>
