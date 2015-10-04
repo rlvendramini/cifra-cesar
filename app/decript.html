@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Cesificator</title>
+    <title>Decesificator</title>
     <meta name="description" content="Uma página que tem como o objetivo encriptar uma informação com base na Cifra de César">
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#EEFF41">
@@ -27,12 +27,12 @@
 
     <header class="main-header">
       <div class="wrap">
-        <h1 class="logo">Cesificator</h1>
+        <h1 class="logo">Decesificator</h1>
         <div class="input-container">
           <span class="input-icon" onclick="toggleMenu();">
             <i class="material-icons">menu</i>
           </span>
-          <input type="text" class="input" id="word" oninput="ENCRIPT_STRING(); showFAB();" placeholder="Digite uma palavra ou frase para criptografar">
+          <input type="text" class="input" id="word" oninput="DECRIPT_STRING();" placeholder="Digite uma palavra ou frase para criptografar">
         </div>
         <div class="menu-container">
           <nav class="dropdown-menu" id="nav-menu">
@@ -43,7 +43,7 @@
           </nav>
         </div>
         <div class="key-container">
-          <input type="range" class="key-input" id="interval" oninput="ENCRIPT_STRING(); SHOW_RANGE_VALUE();" name="intervalo" value="3" min="1" max="26">
+          <input type="range" class="key-input" id="interval" oninput="DECRIPT_STRING(); SHOW_RANGE_VALUE();" name="intervalo" value="3" min="1" max="26">
           <p class="key-label" id="label_in">3</p>
         </div>
       </div>
@@ -51,11 +51,11 @@
     
     <main>
       <div class="wrap">
-        <textarea class="result" id="cripted" readonly></textarea>
+        <textarea class="result" id="decripted" readonly></textarea>
       </div>
     </main>
 
-    <a class="fab hide copy" href="#" data-clipboard-target="#cripted" title="Clique para copiar"><i class="material-icons">content_copy</i></a>
+    <a class="fab hide copy" href="#" data-clipboard-target="#decripted" title="Clique para copiar"><i class="material-icons">content_copy</i></a>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
