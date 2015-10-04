@@ -1,0 +1,41 @@
+// Material Design Dialogs
+.material-dialog
+  display: inline-block
+  position: fixed
+  width: 620px
+  height: auto
+  padding: 10px
+  box-sizing: border-box
+  border-radius: 4.5px
+  background: $light-color
+  transition: all .2s cubic-bezier(.4,.08,.14,.82)
+  opacity: 0
+  visibility: hidden
+  z-index: 999
+  +zdepth(3)
+  +center()
+  
+  &.show
+    opacity: 1
+    visibility: visible
+
+  // Dialog Titles
+  h2
+    margin: 5px 0 20px 0
+    font-family: $font-face
+    font-weight: 400
+
+  p
+    margin: 0 0 20px 0
+    text-align: justify
+    line-height: 1.4em
+    color: darken($light-color, 55%)
+
+  footer
+    display: block
+    position: relative
+    float: right
+    text-transform: uppercase
+
+    a
+      margin: 0
