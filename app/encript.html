@@ -29,10 +29,10 @@
       <div class="wrap">
         <h1 class="logo">Cesificator</h1>
         <div class="input-container">
-          <span class="input-icon" onclick="toggleMenu();">
+          <span class="input-icon" id="menu-button">
             <i class="material-icons">menu</i>
           </span>
-          <input type="text" class="input" id="word" oninput="ENCRIPT_STRING(); showFAB();" placeholder="Digite uma palavra ou frase para criptografar">
+          <input type="text" class="input" id="word" oninput="ENCRIPT_STRING();" placeholder="Digite uma palavra ou frase para criptografar">
         </div>
         <div class="menu-container">
           <nav class="dropdown-menu" id="nav-menu">
@@ -59,7 +59,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/clipboard/src/clipboard.js"></script>
+    <script src="bower_components/clipboard/dist/clipboard.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

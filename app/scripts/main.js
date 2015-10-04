@@ -23,11 +23,12 @@ var EXIT_DIALOG = function() {
 };
 
 var GET_CONTROLLERS = function() {
-  if (EXIT_BUTTON) {
+  
+  if (EXIT_BUTTON || INFO_BUTTON) {
     EXIT_BUTTON.addEventListener('click', EXIT_DIALOG, false);
-  } else if (INFO_BUTTON) {
     INFO_BUTTON.addEventListener('click', SHOW_DIALOG, false);
   }
+
 };
 
 GET_CONTROLLERS();
@@ -50,6 +51,51 @@ var SHOW_RANGE_VALUE = function() {
 };
 
 SHOW_RANGE_VALUE();
+
+
+
+/*
+ * Responsible for toggle the menu at 
+ * Encript and Decript pages.
+ *
+ */
+var MENU_BUTTON = document.querySelector('#menu-button');
+var NAVIGATION_MENU = document.querySelector('#nav-menu');
+
+var TOGGLE_MENU = function() {
+  if (NAVIGATION_MENU) {
+    NAVIGATION_MENU.classList.toggle('show');
+  }
+};
+
+if (MENU_BUTTON) {
+  MENU_BUTTON.addEventListener('click', TOGGLE_MENU, false);
+}
+
+
+
+/*
+ * Responsible for show/hide the Floating Action Button
+ * when big input have or not text.
+ */
+var FAB = document.querySelector('.fab.copy');
+var MESSAGE_INPUT = document.querySelector('#word');
+
+var SHOW_FAB = function() {
+  
+  if (FAB) {
+    if (MESSAGE_INPUT.value !== '') {
+      FAB.classList.remove('hide');
+    } else {
+      FAB.classList.add('hide');
+    }
+  }
+
+};
+
+if (MESSAGE_INPUT) {
+  MESSAGE_INPUT.addEventListener('input', SHOW_FAB, false);
+}
 
 
 
