@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -43,12 +43,19 @@
           </nav>
         </div>
         <div class="key-container">
-          <input type="range" class="key-input" id="interval" oninput="exibeRange(); encriptar();" name="intervalo" value="3" min="1" max="26">
+          <input type="range" class="key-input" id="interval" oninput="SHOW_RANGE_VALUE(); encriptar();" name="intervalo" value="3" min="1" max="26">
           <p class="key-label" id="label_in">3</p>
         </div>
       </div>
     </header>
+    
+    <main>
+      <div class="wrap">
+        <textarea class="result" id="cripted" readonly></textarea>
+      </div>
+    </main>
 
+    <a class="fab hide copy" href="#" data-clipboard-target="#cripted" title="Clique para copiar"><i class="material-icons">content_copy</i></a>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
