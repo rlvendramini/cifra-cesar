@@ -1,0 +1,45 @@
+// bower:sass
+// endbower
+
+
+// Imports - Miscs
+@import 'miscs/browsehappy'
+@import 'miscs/colorscheme'
+@import 'miscs/fontface'
+
+// Imports - Components
+@import 'components/buttons'
+
+// Imports - Mixins
+@import 'mixins/centralize'
+
+
+
+// Basic Styles and Media Queries - BODY, WRAP, BUTTONS
+body 
+  font-family: $font-face
+  background: $main-color
+  overflow-x: hidden
+
+
+.wrap
+  display: inline-block
+  position: relative
+  width: 1024px
+  padding: 10px
+  box-sizing: border-box
+
+@media only screen and('max-width: 1024px')
+  .wrap
+    width: 100%
+
+
+
+// Navigation Menu at Index and Buttons
+.main-nav
+  position: relative
+  width: 270px
+  +center(x)
+
+  .material-button
+    min-width: 200px

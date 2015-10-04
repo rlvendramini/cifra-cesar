@@ -1,0 +1,37 @@
+// Material Buttons Classes, contains Raised, Flat and FAB
+
+// Raised
+.material-button
+  display: inline-block
+  position: relative
+  height: auto
+  padding: 10px
+  margin: 0 0 10px 0
+  border-radius: 4.5px
+  font-family: $font-face
+  text-decoration: none
+  text-align: center
+  line-height: 30px
+  color: darken($accent-color, 25%)
+  background-color: $accent-color
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1), 0 2px 3px 0 rgba(0,0,0,0.2)
+  transition: all .2s ease-in-out
+
+  &:hover
+    background: lighten($accent-color, 10%)
+    box-shadow: 0 6px 13px 0 rgba(0,0,0,0.2), 0 8px 18px 0 rgba(0,0,0,0.2)
+    z-index: 2
+
+  &:active
+    box-shadow: 0 15px 25px 0 rgba(0,0,0,0.2), 0 20px 35px 0 rgba(0,0,0,0.2)
+  
+
+  // Flat
+  &.flat
+    padding: 5px
+    min-width: 0px
+    background: transparent
+    box-shadow: none
+
+    &:hover
+      background: rgba(0,0,0,0.4)
