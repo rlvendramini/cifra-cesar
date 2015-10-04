@@ -14,11 +14,12 @@
 // Imports - Components
 @import 'components/buttons'
 @import 'components/dialogs'
+@import 'components/inputs'
 
 
 
 
-// Basic Styles and Media Queries - BODY, WRAP, MAIN, BUTTONS
+// Basic Styles and Media Queries - BODY, WRAP, MAIN, HEADER
 body 
   font-family: $font-face
   background: $main-color
@@ -48,6 +49,15 @@ main
     width: 100%
 
 
+.main-header
+  display: block
+  position: relative
+  width: 100%
+  padding: 5px 0 0 0
+  box-sizing: border-box
+
+  .wrap
+    +center(x)
 
 // Project's logo and subtitle placed at MAIN_MENU
 .logo
@@ -91,3 +101,133 @@ main
 
   .material-button
     min-width: 200px
+
+
+// Dropdown menu for Encrpt and Decript pages
+.menu-container
+  z-index: 1
+
+
+.dropdown-menu
+  display: none
+  position: absolute
+  width: auto
+  height: auto
+  padding: 10px
+  top: -20px
+  box-sizing: border-box
+  border-radius: 4.5px
+  background-color: $light-color
+  +zdepth(1)
+
+  &:before
+    content: ""
+    position: absolute
+    display: inline-block
+    width: 0
+    height: 0
+    top: -6px
+    left: 18px
+    vertical-align: middle
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    border-bottom: 6px solid $light-color
+
+  ul li a
+    display: block
+    padding: 15px
+    margin: 0 -10px 0 -10px
+    font-family: $font-face
+    text-decoration: none
+    color: #666
+
+    &:hover
+      background: rgba(0,0,0,0.1)
+
+  ul li:first-child a
+    margin: -10px -10px 0 -10px
+
+  ul li:last-child a
+    margin: 0 -10px -10px -10px
+
+  &.show
+    display: block
+
+
+
+// The Big Input at Encript and Decript pages
+.input-container 
+  display: block
+  position: relative
+  width: 680px
+  height: 50px
+  margin: 0 0 20px 0
+  border-radius: 5px
+  overflow: hidden
+  background: $light-color
+  transform: translateX(-50%)
+  +zdepth(1)
+  +center(x)
+
+.input-icon 
+  display: block
+  position: relative
+  width: 50px
+  height: 50px
+  margin: 0 10px 0 0
+  float: left
+  cursor: pointer
+  
+  &:hover
+    background: rgba(0,0,0,0.1)
+
+  i
+    position: relative
+    +center()
+
+.input
+  display: inline-block
+  position: relative
+  width: 80%
+  height: 25px
+  border: none
+  font-size: 1.1em
+  background: transparent
+  +center(y)
+
+  &:focus
+    outline: none
+
+
+// The cripto key container and counter
+.key-container,
+.menu-container
+  display: inline-block
+  position: relative
+  width: 680px
+  +center(x)
+
+
+.key-label 
+  display: inline-block
+  position: relative
+  width: 27px
+  height: 27px
+  margin: 0 10px 0 10px
+  border-radius: 100%
+  font-family: $font-face
+  font-weight: 500
+  text-align: center
+  line-height: 27px
+  color: $accent-color
+  background: #555
+
+.key-input 
+  background: transparent
+  border: none
+  color: $accent-color
+  font-size: 1.5em
+  text-align: center
+  
+  &:focus
+    outline: none

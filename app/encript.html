@@ -6,6 +6,7 @@
     <meta name="description" content="Uma página que tem como o objetivo encriptar uma informação com base na Cifra de César">
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#EEFF41">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -23,37 +24,30 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <section class="material-dialog" id="modalone">
-      <header>
-        <h2>O que é</h2>
-      </header>
-      <p>
-        Em criptografia, a Cifra de César, também conhecida como cifra de troca, 
-        código de César ou troca de César, é uma das mais simples e conhecidas técnicas de criptografia. 
-        É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, que se apresenta no alfabeto abaixo dela um número fixo de vezes. 
-        Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante. 
-        O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais.
-      </p>
-      <footer>
-        <a class="material-button flat" href="#fechar">Fechar</a>
-        <a class="material-button flat" href="encript">Iniciar</a>
-      </footer>
-    </section>
-    
-    <main class="main-menu">
-      <div class="wrap">
-        <h1 class="logo homescreen">Cesificator</h1>
-        <h3 class="subtitle">Criptografia baseada na Cifra de César</h3>
-        
-        <!-- Navigation Menu -->
-        <nav class="main-nav">
-          <a class="material-button" href="#comofunciona" title="Saiba como funciona a Cifra de César">Como Funciona</a>
-          <a class="material-button" href="encript.html" title="Criptografe uma frase">Criptografar</a>
-          <a class="material-button" href="decript.html" title="Descriptografe uma frase">Decriptografar</a>
-        </nav>
 
+    <header class="main-header">
+      <div class="wrap">
+        <h1 class="logo">Cesificator</h1>
+        <div class="input-container">
+          <span class="input-icon" onclick="toggleMenu();">
+            <i class="material-icons">menu</i>
+          </span>
+          <input type="text" class="input" id="word" oninput="encriptar(); showFAB();" placeholder="Digite uma palavra ou frase para criptografar">
+        </div>
+        <div class="menu-container">
+          <nav class="dropdown-menu" id="nav-menu">
+            <ul>
+              <li><a href="decript.html">Descriptografar</a></li>
+              <li><a href="index.html">Menu Principal</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="key-container">
+          <input type="range" class="key-input" id="interval" oninput="exibeRange(); encriptar();" name="intervalo" value="3" min="1" max="26">
+          <p class="key-label" id="label_in">3</p>
+        </div>
       </div>
-    </main>
+    </header>
 
 
     <!-- build:js(.) scripts/vendor.js -->

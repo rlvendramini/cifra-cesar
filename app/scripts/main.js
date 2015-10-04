@@ -1,7 +1,9 @@
+'use strict';
+
+
+
 // Script for UI Interaction and Behavior
 
-
-'use strict';
 
 /* 
  * Open/Close a dialog with some information to user.
