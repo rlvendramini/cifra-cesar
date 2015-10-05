@@ -4,12 +4,7 @@ function toggleMenu() {
   menu.classList.toggle("show");
 }
 
-//essa função é responsável por exibir o valor selecionado no input range em tempo real, para que o usuário saiba qual valor selecionou
-function exibeRange() {
-  var input = document.getElementById('interval');
-  var valor = parseInt(input.value, 10);
-  document.getElementById('label_in').innerHTML=valor;
-}
+
 
 /* Funções de encriptação */
 //nessa função, recebemos um caractere da função de encriptação e fazemos uma análise para saber o que foi digitado

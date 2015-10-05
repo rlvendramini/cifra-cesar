@@ -1,0 +1,7 @@
+{
+  "name": "cifracesar",
+  "private": true,
+  "dependencies": {
+    "clipboard": "~1.4.0"
+  }
+}
