@@ -61,6 +61,13 @@ main
     +center(x)
 
 // Project's logo and subtitle placed at MAIN_MENU
+.imagelogo
+  display: inline-block
+  position: relative
+  margin: 0 0 10px 0
+  +center(x)
+
+
 .logo
   display: block
   position: relative
@@ -82,6 +89,9 @@ main
   text-align: center
   color: #fafafa
 
+@media only screen and('max-width: 680px')
+  .logo
+    margin: 5px 0 10px 0
 
 
 // MAIN_MENU, NAVIGATION_MENU and BUTTONS at Index
