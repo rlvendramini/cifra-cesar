@@ -84,6 +84,20 @@ var MESSAGE_INPUT = document.querySelector('#word');
 var SHOW_FAB = function() {
   
   if (FAB) {
+
+    /*
+     * Instantiate external ClipboardJS object.
+     * @author: Zeno Rocha
+     * @github: zenorocha
+     * 
+     * JSHint: Warning
+     */
+    var COPY_MESSAGE = new Clipboard('.fab.copy');
+
+    COPY_MESSAGE.on('success', function(e) {
+      e.clearSelection();
+    });
+    
     if (MESSAGE_INPUT.value !== '') {
       FAB.classList.remove('hide');
     } else {
