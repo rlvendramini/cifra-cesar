@@ -47,6 +47,7 @@ main
 @media only screen and('max-width: 1024px')
   .wrap
     width: 100%
+    +center(clear)
 
 
 .main-header
@@ -160,9 +161,9 @@ main
 
 
 
-// The Big Input at Encript and Decript pages
+// The Big Input at Encript and Decript pages and their media queries
 .input-container 
-  display: block
+  display: inline-block
   position: relative
   width: 680px
   height: 50px
@@ -173,6 +174,12 @@ main
   transform: translateX(-50%)
   +zdepth(1)
   +center(x)
+
+@media only screen and('max-width: 680px')
+  .input-container
+    width: 100%
+    +center(clear)
+
 
 .input-icon 
   display: block
@@ -204,6 +211,12 @@ main
     outline: none
 
 
+@media only screen and('max-width: 512px')
+  .input
+    font-size: .9em
+
+
+
 // The cripto key container and counter
 .key-container,
 .menu-container
@@ -211,6 +224,12 @@ main
   position: relative
   width: 680px
   +center(x)
+
+@media only screen and('max-width: 680px')
+  .key-container,
+  .menu-container
+    width: 100%
+    +center(clear)
 
 
 .key-label 
