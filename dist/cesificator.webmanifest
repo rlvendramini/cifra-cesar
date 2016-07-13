@@ -6,7 +6,7 @@
   "short_name": "Cesificator",
   "icons": [{
     "src": "favicon.png",
-    "sizes": "120x120",
+    "sizes": "192x192",
     "type":"image/png"
   }],
   "scope": "",
