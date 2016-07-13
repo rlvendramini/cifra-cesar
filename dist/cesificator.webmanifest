@@ -5,7 +5,7 @@
   "description": "Uma aplicação que tem como o objetivo encriptar uma informação com base na Cifra de César",
   "short_name": "Cesificator",
   "icons": [{
-    "src": "/images/branding/b1a07444.cifraCesar.png",
+    "src": "favicon.png",
     "sizes": "120x120",
     "type":"image/png"
   }],
