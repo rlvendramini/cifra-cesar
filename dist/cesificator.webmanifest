@@ -1,0 +1,17 @@
+{
+  "lang": "pt-br",
+  "dir": "ltr",
+  "name": "Cesificator",
+  "description": "Uma aplicação que tem como o objetivo encriptar uma informação com base na Cifra de César",
+  "short_name": "Cesificator",
+  "icons": [{
+    "src": "/images/branding/b1a07444.cifraCesar.png",
+    "sizes": "120x120",
+    "type":"image/png"
+  }],
+  "scope": "",
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "theme_color": "#EEFF41",
+  "background_color": "#10CBCF"
+}
