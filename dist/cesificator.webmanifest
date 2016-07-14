@@ -1,7 +1,7 @@
 {
   "lang": "pt-br",
   "dir": "ltr",
-  "name": "Cesificator",
+  "name": "Cesificator - Cifra de César",
   "description": "Uma aplicação que tem como o objetivo encriptar uma informação com base na Cifra de César",
   "short_name": "Cesificator",
   "icons": [{
