@@ -5,7 +5,7 @@ var urlsToCache = [
 'styles/fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2',
 'scripts/45dcdcd7.main.js',
 'scripts/d63683e6.vendor.js',
-'images/branding/b1a07ddd.cifraCesar.png',
+'images/branding/b1a07444.cifraCesar.png',
 'decript.html',
 'encript.html',
 'favicon.png',
